@@ -59,4 +59,3 @@ if __name__ == "__main__":
         predictions, visualized_output = demo.run_on_image(img)
         save_result_to_txt("/content/detection_result/" + path.split(".")[0] + ".txt", predictions)
         visualized_output.save("/content/detection_result/" + path)
-
