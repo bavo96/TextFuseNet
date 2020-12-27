@@ -19,18 +19,19 @@ from pathlib import Path
 def save_result_to_txt(txt_save_path,prediction):
 
     file = open(txt_save_path,'w')
-    classes = prediction['instances'].pred_classes
+    classes = prediction['instances'].pred_classes.tolist()
+    scores = prediction['instances'].scores.tolist()
     boxes = prediction['instances'].pred_boxes.tensor
-    scores = prediction['instances'].scores
+
     
     for i in range(len(classes)):
-        #if classes[i]==0:
+        
         xmin = str(int(boxes[i][0]))
         ymin = str(int(boxes[i][1]))
         xmax = str(int(boxes[i][2]))
         ymax = str(int(boxes[i][3]))
         
-        file.writelines(xmin+','+ymin+','+xmax+','+ymax+','+classes[i]+scores[i]+'\n')
+        file.writelines(xmin+','+ymin+','+xmax+','+ymax+','+str(classes[i])+str(scores[i])+'\n')
         
     file.close()
 
