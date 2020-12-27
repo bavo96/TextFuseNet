@@ -31,7 +31,7 @@ def save_result_to_txt(txt_save_path,prediction):
         xmax = str(int(boxes[i][2]))
         ymax = str(int(boxes[i][3]))
         
-        file.writelines(xmin+','+ymin+','+xmax+','+ymax+','+str(classes[i])+str(scores[i])+'\n')
+        file.writelines(xmin+','+ymin+','+xmax+','+ymax+','+str(classes[i])+','+str(scores[i])+'\n')
         
     file.close()
 
