@@ -57,6 +57,6 @@ if __name__ == "__main__":
         img = read_image(fullpath, format="BGR")
         start_time = time.time()
         predictions, visualized_output = demo.run_on_image(img)
-
+        save_result_to_txt("/content/detection_result/", predictions)
         visualized_output.save("/content/detection_result/" + path)
 
