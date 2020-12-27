@@ -55,7 +55,12 @@ if __name__ == "__main__":
     demo = VisualizationDemo(cfg)
     parent = "/content/box_final/images/caudat/"
     imgs = os.listdir(parent)
-    for path in imgs:
+    print("Number of images:", len(imgs))
+    for i, path in enumerate(imgs):
+        if i == 100:
+            break
+        print("IMG:", i)
+        
         fullpath = parent + path
         img = read_image(fullpath, format="BGR")
         start_time = time.time()
