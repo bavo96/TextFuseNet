@@ -21,7 +21,7 @@ def save_result_to_txt(txt_save_path,prediction):
     file = open(txt_save_path,'w')
     classes = prediction['instances'].pred_classes
     boxes = prediction['instances'].pred_boxes.tensor
-    scores = prediction['instances'].scores.tensor
+    scores = prediction['instances'].scores
     
     for i in range(len(classes)):
         #if classes[i]==0:
