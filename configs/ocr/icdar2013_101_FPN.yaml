@@ -1,8 +1,8 @@
-_BASE_: "./Base-RCNN-FPN.yaml"
+_BASE_: "./configs/ocr/Base-RCNN-FPN.yaml"
 MODEL:
   MASK_ON: True
   TEXTFUSENET_MUTIL_PATH_FUSE_ON: True
-  WEIGHTS: "./out_dir_r101/icdar2013_model/model_ic13_r101.pth"
+  WEIGHTS: "./out_dir_r101/model_ic13_r101.pth"
   PIXEL_STD: [57.375, 57.120, 58.395]
   RESNETS:
     STRIDE_IN_1X1: False  # this is a C2 model
