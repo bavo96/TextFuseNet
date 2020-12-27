@@ -53,9 +53,10 @@ if __name__ == "__main__":
 
     cfg = setup_cfg()
     demo = VisualizationDemo(cfg)
-    imgs = os.listdir("/content/test/")
+    parent = "/content/box_final/images/caudat/"
+    imgs = os.listdir(parent)
     for path in imgs:
-        fullpath = "/content/test/" + path
+        fullpath = parent + path
         img = read_image(fullpath, format="BGR")
         start_time = time.time()
         predictions, visualized_output = demo.run_on_image(img)
