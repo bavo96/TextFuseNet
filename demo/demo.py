@@ -57,8 +57,6 @@ if __name__ == "__main__":
     imgs = os.listdir(parent)
     print("Number of images:", len(imgs))
     for i, path in enumerate(imgs):
-        if i == 100:
-            break
         print("IMG:", i)
         
         fullpath = parent + path
