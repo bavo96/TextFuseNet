@@ -38,7 +38,7 @@ def save_result_to_txt(txt_save_path,prediction):
 def setup_cfg():
     # load config from file and command-line arguments
     cfg = get_cfg()
-    cfg.merge_from_file("./configs/ocr/icdar2013_101_FPN.yaml")
+    cfg.merge_from_file("TextFuseNet/configs/ocr/icdar2013_101_FPN.yaml")
     # Set score_threshold for builtin models
     cfg.MODEL.RETINANET.SCORE_THRESH_TEST = 0.5
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
